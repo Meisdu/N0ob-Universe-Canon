@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <script>
-        // If the screen width is 900px or less and not already on the mobile page, redirect
+    <script>
         if (window.innerWidth <= 900 && !window.location.href.includes('mobile.html')) {
-            window.location.href = "./mobile.html";
+            window.location.href = "mobile.html";
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>N0ob Universe Canon - Official Lore</title>
     
-    <!-- WEBSITE FAVICON -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico?v=2">
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?v=2">
     
-    <!-- External Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght=700&family=Orbitron:wght=700&family=Poppins:wght=400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* --- FONTS --- */
         @font-face {
             font-family: 'BillyJeanStyle';
             src: url('BillyJeanStyle-qeAx.ttf') format('truetype');
@@ -31,7 +29,6 @@
             font-style: normal;
         }
 
-        /* General Page Styling */
         body {
             background-color: #0b0b13;
             color: #e0e0e6;
@@ -41,11 +38,6 @@
             margin: 0;
         }
 
-        /* Android Elements (Hidden on PC by default) */
-        .android-app-bar { display: none; }
-        .android-bottom-nav { display: none; }
-
-        /* Custom Font Assignments */
         .sonic-font {
             font-family: 'Nise Sega Sonic Font', 'Orbitron', sans-serif;
             color: #0054b4;
@@ -62,7 +54,6 @@
             text-transform: uppercase;
         }
 
-        /* PC Titles */
         h1 {
             color: #ffaa00;
             font-size: 2.8rem;
@@ -77,7 +68,6 @@
             font-size: 1.5rem;
         }
 
-        /* Social Media Button Links Menu */
         .social-menu {
             display: flex;
             justify-content: center;
@@ -96,25 +86,11 @@
             transition: all 0.3s ease;
         }
 
-        .youtube-link-btn {
-            background-color: #ff0000;
-            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
-        }
-        .youtube-link-btn:hover {
-            transform: scale(1.05);
-            background-color: #cc0000;
-        }
+        .youtube-link-btn { background-color: #ff0000; box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5); }
+        .youtube-link-btn:hover { transform: scale(1.05); background-color: #cc0000; }
+        .roblox-link-btn { background-color: #0084ff; box-shadow: 0px 0px 15px rgba(0, 132, 255, 0.5); }
+        .roblox-link-btn:hover { transform: scale(1.05); background-color: #0066cc; }
 
-        .roblox-link-btn {
-            background-color: #0084ff;
-            box-shadow: 0px 0px 15px rgba(0, 132, 255, 0.5);
-        }
-        .roblox-link-btn:hover {
-            transform: scale(1.05);
-            background-color: #0066cc;
-        }
-
-        /* PC Menu Navigation Buttons */
         .nav-menu {
             display: flex;
             justify-content: center;
@@ -142,7 +118,6 @@
             box-shadow: 0px 0px 15px rgba(255, 170, 0, 0.4);
         }
 
-        /* Lore Content Container & Boxes */
         .tab-content {
             display: none;
             animation: fadeIn 0.4s ease;
@@ -165,12 +140,10 @@
         }
 
         strong { color: #fff; }
-
         .highlight-mj { border-left: 4px solid #ff0000; padding-left: 10px; margin: 10px 0; }
         .highlight-sonic { border-left: 4px solid #0054b4; padding-left: 10px; margin: 10px 0; }
         .rose-box { border: 2px solid #ff69b4; box-shadow: 0px 0px 15px rgba(255, 105, 180, 0.3); }
         .rose-box h2 { color: #ff69b4; border-bottom-color: #ff69b4; }
-
         ul { padding-left: 20px; }
         li { margin-bottom: 10px; }
 
@@ -187,125 +160,21 @@
         }
 
         .footer { margin-top: 60px; font-size: 0.9rem; color: #6a6a8a; }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(5px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* =======================================================
-           📱 ANDROID & TABLET MODE (TRIGGERED ON MOBILE)
-           ======================================================= */
-        @media (max-width: 900px) {
-            body {
-                padding: 70px 10px 80px 10px;
-                background-color: #07070d;
-            }
-
-            /* Hide PC Header, Navigation and Footer */
-            h1, .nav-menu, .footer {
-                display: none;
-            }
-
-            /* Android App Bar Top UI */
-            .android-app-bar {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 56px;
-                background-color: #121224;
-                border-bottom: 1px solid #2a2a42;
-                box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-                z-index: 1000;
-            }
-
-            .android-app-title {
-                color: #ffaa00;
-                font-size: 1.2rem;
-                font-weight: 600;
-                letter-spacing: 1px;
-            }
-
-            /* Android Bottom Nav Bar UI */
-            .android-bottom-nav {
-                display: flex;
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 65px;
-                background-color: #121224;
-                border-top: 1px solid #2a2a42;
-                box-shadow: 0px -4px 15px rgba(0,0,0,0.4);
-                z-index: 1000;
-                justify-content: space-around;
-                align-items: center;
-                padding-bottom: env(safe-area-inset-bottom);
-            }
-
-            .android-nav-item {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                color: #8a8aab;
-                background: none;
-                border: none;
-                font-size: 0.75rem;
-                font-weight: 600;
-                cursor: pointer;
-                padding: 5px 0;
-            }
-
-            .android-nav-item span {
-                font-size: 1.3rem;
-                margin-bottom: 2px;
-            }
-
-            .android-nav-item.active {
-                color: #ffaa00;
-            }
-
-            /* Mobile Box Adjustments */
-            .lore-box {
-                margin: 15px auto;
-                padding: 18px;
-                border-radius: 16px;
-                font-size: 0.95rem;
-            }
-            
-            .avatar-img {
-                max-width: 220px;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- 📱 ANDROID TOP APP BAR (Only visible on mobile/tablet) -->
-    <div class="android-app-bar">
-        <div class="android-app-title">🌌 N0ob Universe Mobile</div>
-    </div>
-
-    <!-- 💻 PC SITE TITLE (Hidden on Mobile) -->
     <h1>🌌 N0OB UNIVERSE CANON: THE OFFICIAL LORE FILE</h1>
     
-    <!-- SOCIAL LINKS MENU -->
     <div class="social-menu">
-        <a href="https://www.youtube.com/@C00l3stN0ob" target="_blank" class="youtube-link-btn">
-            ▶ YouTube Channel
-        </a>
-        <a href="https://www.roblox.com/users/7151450282/profile" target="_blank" class="roblox-link-btn">
-            🟥 Roblox Profile
-        </a>
+        <a href="https://www.youtube.com/@C00l3stN0ob" target="_blank" class="youtube-link-btn">▶ YouTube Channel</a>
+        <a href="https://www.roblox.com/users/7151450282/profile" target="_blank" class="roblox-link-btn">🟥 Roblox Profile</a>
     </div>
     
-    <!-- 💻 PC TABS NAVIGATION (Hidden on Mobile) -->
     <div class="nav-menu">
         <button class="nav-btn active" onclick="openTab('origins')">🐾 Origins & Family</button>
         <button class="nav-btn" onclick="openTab('appearance')">👕 Appearances</button>
@@ -313,7 +182,6 @@
         <button class="nav-btn" onclick="openTab('love')">💖 True Love</button>
     </div>
 
-    <!-- TAB 1: ORIGINS & FAMILY -->
     <div id="origins" class="tab-content active">
         <div class="lore-box">
             <h2>🐾 1. Origins & Mysterious Nature (The CatBloxian)</h2>
@@ -323,11 +191,9 @@
         <div class="lore-box">
             <h2>❄️ 2. The Sub-Zero Trauma & The Rescue</h2>
             <p>During its early childhood, N0ob was trapped alone for 3 agonizing days in a freezing, sub-zero winter environment. This terrifying event caused a lifelong trauma regarding enclosed spaces and being trapped within four walls.</p>
-            
             <div class="highlight-mj">
                 <p><strong><span class="michael-font">Michael's Heroic Rescue:</span></strong> It was Michael Jackson himself who found N0ob, rescued it from the deadly cold, and saved its life. This heroic moment laid the foundation for their unbreakable bond, turning Michael into N0ob's ultimate savior and protector.</p>
             </div>
-            
             <div class="highlight-sonic">
                 <p><strong><span class="sonic-font">Sonic’s Role:</span></strong> Sonic the Hedgehog used to be N0ob's closest, most cherished best friend during that early era. However, as N0ob grew older and its life shifted completely toward the music industry, this close bond eventually became a thing of the past.</p>
             </div>
@@ -345,17 +211,13 @@
         </div>
     </div>
 
-    <!-- TAB 2: APPEARANCES -->
     <div id="appearance" class="tab-content">
         <div class="lore-box">
             <h2>👕 The CatBloxian Physical Traits & Live Avatar</h2>
             <p>N0ob's appearance perfectly reflects its mixed nature as the only member of the CatBloxian race:</p>
-            
-            <!-- OFFICIAL AVATAR IMAGE -->
             <div class="avatar-img-container">
                 <img src="noFilter.webp" alt="N0ob Avatar" class="avatar-img">
             </div>
-
             <ul>
                 <li><strong>Classic Roblox Avatar Colors:</strong> As documented in the core data, it features a bright yellow head and arms, a deep royal blue torso, and dark charcoal-black legs.</li>
                 <li><strong>Feline Features:</strong> Alongside its blocky Robloxian structure, it possesses distinct animal traits including sharp cat ears, a long cat tail, and nimble cat paws.</li>
@@ -364,7 +226,6 @@
         </div>
     </div>
 
-    <!-- TAB 3: CAREER & ERA -->
     <div id="career" class="tab-content">
         <div class="lore-box">
             <h2>🎤 5. The Current Era: The 10-Year-Old Superstar</h2>
@@ -377,7 +238,6 @@
         </div>
     </div>
 
-    <!-- TAB 4: TRUE LOVE -->
     <div id="love" class="tab-content">
         <div class="lore-box rose-box">
             <h2>💖 6. True Love in the Real World: Rose</h2>
@@ -387,56 +247,18 @@
         </div>
     </div>
 
-    <!-- 📱 ANDROID BOTTOM NAVIGATION BAR (Only visible on Mobile/Tablet) -->
-    <div class="android-bottom-nav">
-        <button class="android-nav-item active" onclick="openTab('origins')">
-            <span>🐾</span>Origins
-        </button>
-        <button class="android-nav-item" onclick="openTab('appearance')">
-            <span>👕</span>Look
-        </button>
-        <button class="android-nav-item" onclick="openTab('career')">
-            <span>🎸</span>Music
-        </button>
-        <button class="android-nav-item" onclick="openTab('love')">
-            <span>💖</span>Rose
-        </button>
-    </div>
+    <div class="footer">👑 Designed & Coded by N0ob Jackson • 2026</div>
 
-    <!-- PC Footer -->
-    <div class="footer">
-        👑 Designed & Coded by N0ob Jackson • 2026
-    </div>
-
-    <!-- SCRIPT FOR BALANCED SWITCHING -->
     <script>
         function openTab(tabId) {
             var contents = document.getElementsByClassName("tab-content");
-            for (var i = 0; i < contents.length; i++) {
-                contents[i].classList.remove("active");
-            }
-
+            for (var i = 0; i < contents.length; i++) contents[i].classList.remove("active");
             var desktopBtns = document.getElementsByClassName("nav-btn");
-            var androidBtns = document.getElementsByClassName("android-nav-item");
-            for (var i = 0; i < desktopBtns.length; i++) {
-                desktopBtns[i].classList.remove("active");
-                androidBtns[i].classList.remove("active");
-            }
-
+            for (var i = 0; i < desktopBtns.length; i++) desktopBtns[i].classList.remove("active");
             document.getElementById(tabId).classList.add("active");
-
             var currentIdx = ['origins', 'appearance', 'career', 'love'].indexOf(tabId);
-            if (currentIdx !== -1) {
-                desktopBtns[currentIdx].classList.add("active");
-                androidBtns[currentIdx].classList.add("active");
-            }
-            
-            // Scroll to top on mobile when tab changes so they don't get lost
-            if (window.innerWidth <= 900) {
-                window.scrollTo({top: 0, behavior: 'smooth'});
-            }
+            if (currentIdx !== -1) desktopBtns[currentIdx].classList.add("active");
         }
     </script>
 </body>
 </html>
-      
