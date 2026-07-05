@@ -5,31 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>N0ob Universe - Official Mobile App</title>
     
-    <!-- WEBSITE FAVICON -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico?v=2">
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?v=2">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght=700&family=Orbitron:wght=700&family=Poppins:wght=400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* --- FONTS & THEME --- */
-        @font-face {
-            font-family: 'BillyJeanStyle';
-            src: url('BillyJeanStyle-qeAx.ttf') format('truetype');
-        }
-        @font-face {
-            font-family: 'BillyJeanStyle';
-            src: url('BillyJeanStyleBold-VoD0.ttf') format('truetype');
-            font-weight: bold;
-        }
-
         body {
             background-color: #07070d;
             color: #e0e0e6;
             font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 70px 12px 85px 12px; /* Top and Bottom bar spacing */
+            padding: 70px 12px 85px 12px;
             -webkit-tap-highlight-color: transparent;
         }
 
@@ -47,7 +34,6 @@
             text-transform: uppercase;
         }
 
-        /* --- PURE ANDROID TOP APP BAR --- */
         .android-app-bar {
             display: flex;
             align-items: center;
@@ -70,7 +56,6 @@
             letter-spacing: 1px;
         }
 
-        /* --- SOCIAL QUICK LINKS --- */
         .social-menu {
             display: flex;
             justify-content: center;
@@ -88,13 +73,11 @@
             font-size: 0.85rem;
             font-weight: 600;
             border-radius: 25px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
         }
 
         .youtube-btn { background-color: #ff0000; }
         .roblox-btn { background-color: #0084ff; }
 
-        /* --- MATERIAL YOU LORE BOXES --- */
         .tab-content {
             display: none;
             animation: appFadeIn 0.3s ease-out;
@@ -107,7 +90,7 @@
         .lore-box {
             background: linear-gradient(145deg, #111120, #16162c);
             border: 1px solid #2a2a42;
-            border-radius: 16px; /* High oval corners like Android UI */
+            border-radius: 16px;
             padding: 20px;
             margin-bottom: 15px;
             text-align: left;
@@ -129,11 +112,9 @@
         .highlight-sonic { border-left: 3.5px solid #0054b4; padding-left: 10px; margin: 10px 0; }
         .rose-box { border: 1.5px solid #ff69b4; }
         .rose-box h2 { color: #ff69b4; border-bottom-color: #ff69b4; }
-
         ul { padding-left: 18px; margin: 8px 0; }
         li { margin-bottom: 8px; }
 
-        /* Avatar Render inside App */
         .avatar-container { display: flex; justify-content: center; margin: 15px 0; }
         .avatar-img {
             max-width: 200px;
@@ -145,7 +126,6 @@
             padding: 10px;
         }
 
-        /* --- PURE ANDROID BOTTOM NAVIGATION BAR --- */
         .android-bottom-nav {
             display: flex;
             position: fixed;
@@ -174,7 +154,6 @@
             font-size: 0.75rem;
             font-weight: 600;
             cursor: pointer;
-            font-family: 'Poppins', sans-serif;
         }
 
         .android-nav-item span {
@@ -183,13 +162,8 @@
             transition: transform 0.2s ease;
         }
 
-        .android-nav-item.active {
-            color: #ffaa00;
-        }
-
-        .android-nav-item.active span {
-            transform: scale(1.15);
-        }
+        .android-nav-item.active { color: #ffaa00; }
+        .android-nav-item.active span { transform: scale(1.15); }
 
         @keyframes appFadeIn {
             from { opacity: 0; transform: translateY(8px); }
@@ -199,18 +173,15 @@
 </head>
 <body>
 
-    <!-- ANDROID TOP BAR -->
     <div class="android-app-bar">
         <div class="android-app-title">🌌 N0ob Universe App</div>
     </div>
 
-    <!-- SOCIAL BUTTONS -->
     <div class="social-menu">
         <a href="https://www.youtube.com/@C00l3stN0ob" target="_blank" class="youtube-btn">▶ YouTube</a>
         <a href="https://www.roblox.com/users/7151450282/profile" target="_blank" class="roblox-btn">🟥 Roblox</a>
     </div>
 
-    <!-- TAB 1: ORIGINS -->
     <div id="origins" class="tab-content active">
         <div class="lore-box">
             <h2>🐾 1. Origins & CatBloxian Nature</h2>
@@ -239,7 +210,6 @@
         </div>
     </div>
 
-    <!-- TAB 2: LOOK -->
     <div id="appearance" class="tab-content">
         <div class="lore-box">
             <h2>👕 Physical Traits & Live Avatar</h2>
@@ -254,19 +224,17 @@
         </div>
     </div>
 
-    <!-- TAB 3: MUSIC -->
     <div id="career" class="tab-content">
         <div class="lore-box">
             <h2>🎤 5. The 10-Year-Old Superstar Era</h2>
             <p>Currently 10 years old, N0ob is taking massive standalone steps into music history:</p>
             <ul>
                 <li><strong>Jackson 7 Group:</strong> Joined forces with the original Jackson 5 plus Jermaine Jackson to form a 7-member supergroup, completing "I Want You Back".</li>
-                <li><strong>Solo Project:</strong> Working heavily in the studio on its debut solo masterpiece: "Don't Stop 'Til You Get Enough" (DSTYGE).</li>
+                <li><strong>Solo Project:</strong> Working heavily on its debut solo masterpiece: "Don't Stop 'Til You Get Enough" (DSTYGE).</li>
             </ul>
         </div>
     </div>
 
-    <!-- TAB 4: ROSE -->
     <div id="love" class="tab-content">
         <div class="lore-box rose-box">
             <h2>💖 6. True Love: Rose</h2>
@@ -275,7 +243,6 @@
         </div>
     </div>
 
-    <!-- ANDROID BOTTOM NAV BAR -->
     <div class="android-bottom-nav">
         <button class="android-nav-item active" onclick="openTab('origins')"><span>🐾</span>Origins</button>
         <button class="android-nav-item" onclick="openTab('appearance')"><span>👕</span>Look</button>
@@ -287,15 +254,11 @@
         function openTab(tabId) {
             var contents = document.getElementsByClassName("tab-content");
             for (var i = 0; i < contents.length; i++) contents[i].classList.remove("active");
-
             var androidBtns = document.getElementsByClassName("android-nav-item");
             for (var i = 0; i < androidBtns.length; i++) androidBtns[i].classList.remove("active");
-
             document.getElementById(tabId).classList.add("active");
-
             var currentIdx = ['origins', 'appearance', 'career', 'love'].indexOf(tabId);
             if (currentIdx !== -1) androidBtns[currentIdx].classList.add("active");
-
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
     </script>
