@@ -38,6 +38,29 @@
             margin: 0;
         }
 
+        /* 📱 MANUEL MOBİL BUTONU STİLİ */
+        .mobile-switch-container {
+            margin-bottom: 25px;
+        }
+        .mobile-switch-btn {
+            background: linear-gradient(45deg, #ffaa00, #ff5500);
+            color: #0b0b13;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0px 0px 20px rgba(255, 170, 0, 0.6);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .mobile-switch-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 30px rgba(255, 170, 0, 0.9);
+        }
+
         .sonic-font {
             font-family: 'Nise Sega Sonic Font', 'Orbitron', sans-serif;
             color: #0054b4;
@@ -168,6 +191,11 @@
 </head>
 <body>
 
+    <!-- BUTTON TO GO DIRECTLY TO THE ANDROID APP INTERFACE -->
+    <div class="mobile-switch-container">
+        <a href="mobile.html" class="mobile-switch-btn">📱 Open N0ob Universe Mobile App</a>
+    </div>
+
     <h1>🌌 N0OB UNIVERSE CANON: THE OFFICIAL LORE FILE</h1>
     
     <div class="social-menu">
@@ -262,3 +290,4 @@
     </script>
 </body>
 </html>
+ 
